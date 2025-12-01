@@ -1,0 +1,1 @@
+print(__import__('functools').reduce(lambda s,v:((s[0]+v%100+100)%100,s[1]+abs(v)//100+(1 if s[0]!=0 and((v<0 and s[0]+v%-100<=0) or (v>0 and s[0]+v%100>99))else 0)),[(int(n))for n in open("input.txt").read().replace("L","-").replace("R","").split("\n")if n],(50,0))[1])
